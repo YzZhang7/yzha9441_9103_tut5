@@ -7,3 +7,5 @@ anotherone
 
 ![The San Juan Mountains are beautiful!](/assets/san-juan-mountains.avif "San Juan Mountains" "I'm hover text.")
 **SAN JUAN MOUNTAINS**
+
+![The San Juan Mountains are beautiful!](/assets/shiprock.avif "Pic 2 " "I'm hover text.")
