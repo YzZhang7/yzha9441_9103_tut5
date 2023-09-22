@@ -9,5 +9,3 @@ anotherone
 **SAN JUAN MOUNTAINS**
 
 
-# WOW IMAGE
-![The San Juan Mountains are beautiful!](/assets/shiprock.avif "Pic 2 " "I'm hover text.")
