@@ -5,7 +5,5 @@ anotherone
 
 # WOW IMAGE
 
-![The San Juan Mountains are beautiful!](/assets/san-juan-mountains.avif "San Juan Mountains" "I'm hover text.")
+![The San Juan Mountains are beautiful!](/assets/san-juan-mountains.avif "San Juan Mountains")
 **SAN JUAN MOUNTAINS**
-
-
