@@ -3,10 +3,10 @@
 ## Quiz 8
 
 ### **Part 1. Imaging Technique Inspiration**
-As the following reference images, I utilized gradient stripes of varying densities to compose and differentiate between different planar graphics within the frame, achieving a distinction of shapes as well as foreground shapes and background. I take the following elements as reference into my project: gradient Stripes, the density of the stripes, and the arrangement of line segments tails on the curve.  
+As the following reference images, I utilized gradient stripes of varying densities to compose and differentiate between different planar graphics within the frame, achieving a distinction of shapes as well as foreground shapes and background. I take the following elements as reference into my project: gradient Stripes, the density of the stripes, and the arrangement of line segments tails on the curve.
 ![Reference images 2 ](/assets/refima1.jpg "refima1")
 
-I believe that this approach can enhance the layering and distinction between foreground and background in 2D planar artistic work. Adding a wave animation effect to some of the stripes can enhance the interactivity of the frame. The final effect is roughly as shown in the image below.  
+I believe that this approach can enhance the layering and distinction between foreground and background in 2D planar artistic work. Adding a wave animation effect to some of the stripes can enhance the interactivity of the frame. The final effect is roughly as shown in the image below.
 ![Reference images 2 ](/assets/refima2.jpg "refima2")
 
 
