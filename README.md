@@ -13,13 +13,13 @@ I believe that this approach can enhance the layering and distinction between fo
 ### **Part 2. Coding Technique Exploration**
 The main coding techniques are referenced from these two links: \
 Reference Link 1: https://openprocessing.org/sketch/1914365 \
-Reference Link 2: https://openprocessing.org/sketch/1532031\
+Reference Link 2: https://openprocessing.org/sketch/1532031
 
-How they help to achieve the desired effect:\
-1.	blendMode(), use 'add' blend mode to achieve the effect of line superposition.\
-2.	The noise function to generate Perlin Noise and draw a pulse wave.\
-3.	Using 'plus+' to change the position of the waveform line, creating an animated effect.\
-4.	drawingContext.createLinearGradient() creates a linear gradient effect for the line, and shadowColor and shadowOffset are used to add shadow and offset effects to the line segments.\
+How they help to achieve the desired effect:
+1.	blendMode(), use 'add' blend mode to achieve the effect of line superposition.
+2.	The noise function to generate Perlin Noise and draw a pulse wave.
+3.	Using 'plus+' to change the position of the waveform line, creating an animated effect.
+4.	drawingContext.createLinearGradient() creates a linear gradient effect for the line, and shadowColor and shadowOffset are used to add shadow and offset effects to the line segments.
 
 Here are the images of the two example codes:\
 ![Reference images 2 ](/assets/code1.jpg "code1")\
