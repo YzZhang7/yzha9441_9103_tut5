@@ -1,11 +1,10 @@
 # yzha9441_9103_tut5
 
-
 ## Quiz 10
-### **Quiz 10 sketch**
-![Quiz 10 sketch](/assets/refima1.jpg "quiz10")
+### **Quiz 10 sketch code in sketch.js**
+![Quiz 10 sketch](/assets/sketchwk10.mp4 "quiz10")
 
-### **Code In sketch.js**
+
 ## Quiz 8
 
 ### **Part 1. Imaging Technique Inspiration**
