@@ -1,16 +1,16 @@
-let song
-let barWidth=3
+let song;
+let barWidth=3;
 
 function preload() {
     song = loadSound("audio/sample-visualisation.mp3");
 }
 
 function setup() {
-    cnv=createCanvas(800, 800) 
-    fft=new p5.FFT(0.8,64) //set smoothing and number of bins
+    cnv=createCanvas(800, 800) ;
+    fft=new p5.FFT(0.8,64); //set smoothing and number of bins
     song.connect(fft);
-    angleMode(DEGREES)
-    colorMode(HSB,360,100,100)
+    angleMode(DEGREES);
+    colorMode(HSB,360,100,100);
 }
 
 function draw() {
@@ -47,9 +47,9 @@ function draw() {
 
 
   //add texts
-    textAlign(CENTER,CENTER)
-    fill(360)
-    textSize(20)
+    textAlign(CENTER,CENTER);
+    fill(360);
+    textSize(20);
     text("Click to play or pause", 400,150);
 
 }
@@ -59,6 +59,6 @@ function mousePressed() {
     if (song.isPlaying()) {
         song.stop();
     } else {
-        song.play()
+        song.play();
     }
 }
