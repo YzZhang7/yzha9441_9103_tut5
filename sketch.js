@@ -2,7 +2,7 @@ let song;
 let barWidth=3;
 
 function preload() {
-    song = loadSound("audio/sample-visualisation.mp3");
+    song = loadSound("assets/sample-visualisation.mp3");
 }
 
 function setup() {
