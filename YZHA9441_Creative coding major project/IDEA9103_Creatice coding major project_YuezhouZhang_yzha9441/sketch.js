@@ -3,7 +3,7 @@
 // [G_1] Apple's coordinates 
   // Set scale_val for big and small circles
 let circleCenters = [
-  { x: 600, y: 524, angle: 0, s: 1, state: 0, scale_val: 1 },
+  { x: 600, y:524, angle: 0, s: 1, state: 0, scale_val: 1 },
   { x: 500, y: 700, angle: 0, s: 1, state: 0, scale_val: 1 },
   { x: 600, y: 1041, angle: 0, s: 1, state: 0, scale_val: 1 },
   { x: 700, y: 1220, angle: 0, s: 1, state: 0, scale_val: 1 },
@@ -53,7 +53,7 @@ const canvasRatio = 2 / 3; // make sure the canvas ratio is always 2:3
 function setup() {
   createCanvas(windowWidth, windowHeight);
   calculateCanvasSize();
-  bgcol = color(245, 209, 17)
+  bgcol = color(251, 197, 0)
 
   // set acceleration and velocity of apple to simulate realistic motion 
   getCirVel = createVector(0, 0)
@@ -95,7 +95,7 @@ function draw() {
 function keyPressed() {
   // [A_1.1] Input A/S to change colour(change season)
   if (key == 'a' || key == 'A') bgcol = color(245, 185, 173)
-  if (key == 's' || key == 'S') bgcol = color(245, 209, 17)
+  if (key == 's' || key == 'S') bgcol = color(2251, 197, 0)
 
   // [A_1.2] Click one apple and input P to create a table to pick the apple.
   if (pressCir) {
@@ -130,7 +130,7 @@ function drawTable() {
 
     // [A_2.3] Calculate the acceleration and velocity of apple to simulate motion 
     getCirAcc = createVector(mouseX - scaledElement(getCir.x), mouseY - scaledElement(getCir.y)).mult(0.02) // acceleration vector
-    getCirAcc.y = 2.5 // gravity
+    getCirAcc.y = 2.5 
     getCirVel.add(getCirAcc)
     getCir.x += getCirVel.x
     getCir.y += getCirVel.y
@@ -230,7 +230,7 @@ function drawBackgroundLines() {
  // [G_5.2] Draw lines for each radius
 function drawLines(numLines, gap, interval, inputRadius, centerX, centerY, strokeW) {
   strokeWeight(strokeW)
-  stroke(151, 183, 176)
+  stroke(100, 100, 100)
   for (let i = 0; i < numLines; i++) {
     let x = gap + i * interval
     let y1 = canvasHeight; // start from the bottom of canvas
@@ -280,7 +280,7 @@ function drawRoots() {
   let rectRootY2 = scaledElement(30);
   let rectRootX3 = scaledElement(900);
   let rectRootY3 = scaledElement(10);
-  fill(245, 209, 17);
+  fill(251, 197, 0);
   for (i = 0; i < 3; i++) {
     rect(width / 2 - (rectRootX1 - i * scaledElement(50)) / 2, height - (rectHeight - (rectRootY1 + i * scaledElement(70))), rectRootX1 - (i * scaledElement(50)), rectRootY1);
     rect(width / 2 - (rectRootX2 - i * scaledElement(50)) / 2, height - (rectHeight - (rectRootY2 + i * scaledElement(70)) - scaledElement(30)), rectRootX2 - (i * scaledElement(50)), rectRootY2);
