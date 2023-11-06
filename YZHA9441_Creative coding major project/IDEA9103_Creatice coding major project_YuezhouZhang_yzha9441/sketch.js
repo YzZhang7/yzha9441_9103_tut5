@@ -86,7 +86,7 @@ function draw() {
    fill(255)
    textSize(scaledElement(50))
    text("1. Press 'A' or 'S' to change season.", scaledElement(50), scaledElement(3000));
-   text("2. Hover the apples to make it rotate.", scaledElement(50),scaledElement(3070));
+   text("2. Hover the apples to make them rotate.", scaledElement(50),scaledElement(3070));
    text("3. Choose one apple, mouse click it and press 'Z' to pick it.", scaledElement(50),scaledElement(3140));
    text("4. Quickly move the mouse to toss and roll the apple.", scaledElement(50),scaledElement(3210));
 }
@@ -103,7 +103,6 @@ function keyPressed() {
       table = true
     }
   }
-
 }
 
 // [A_2] Draw the table to hold the falling apple
@@ -147,7 +146,6 @@ function drawTable() {
     } else {
       getCir.y += getCirVel.y
     }
-
   }
 }
 
