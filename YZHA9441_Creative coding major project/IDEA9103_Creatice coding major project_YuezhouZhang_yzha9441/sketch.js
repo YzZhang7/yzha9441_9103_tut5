@@ -3,7 +3,7 @@
 // [G_1] Apple's coordinates 
   // Set scale_val for big and small circles
 let circleCenters = [
-  { x: 600, y:524, angle: 0, s: 1, state: 0, scale_val: 1 },
+  { x: 600, y: 524, angle: 0, s: 1, state: 0, scale_val: 1 },
   { x: 500, y: 700, angle: 0, s: 1, state: 0, scale_val: 1 },
   { x: 600, y: 1041, angle: 0, s: 1, state: 0, scale_val: 1 },
   { x: 700, y: 1220, angle: 0, s: 1, state: 0, scale_val: 1 },
