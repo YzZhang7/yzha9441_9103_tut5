@@ -49,23 +49,25 @@ let circleRadius = circleSize / 2;
 let canvasWidth, canvasHeight;
 const canvasRatio = 2 / 3; // make sure the canvas ratio is always 2:3
 
+let sun
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
   calculateCanvasSize();
-  bgcol = color(243, 241, 234)
+  bgcol = color(251, 197, 0)
 
   // set acceleration and velocity of apple to simulate realistic motion 
   getCirVel = createVector(0, 0)
   getCirAcc = createVector(0, 0)
 
+  sun = new Sun(width / 2, 0, 8, color(255, 255, 255, 50)) 
 }
 
 // [G_2] Set draw functions
 function draw() {
   background(bgcol);
 
-  drawSun();
+  sun.drawSun();
   drawBackgroundLines();
   drawGround();
   drawTreeTrunk();
@@ -192,20 +194,24 @@ function scaledElement(inputElement) {
 }
 
 // [G_4] Draw concentric sun
-function drawSun() {
-  noStroke();
-  let numSuns = 8;
-  let sunCenterX = width / 2;
-  let sunCenterY = 0;
-
-  for (let i = 0; i < numSuns; i++) {
-    let sunSize = scaledElement(300 + i * 50);
-    let sunColor = color(255, 255, 255, 50);
-
-    fill(sunColor);
-    ellipse(sunCenterX, sunCenterY, sunSize * 2);
+class Sun {
+    constructor(x, y, num, col) {
+      this.numSuns = num;
+      this.sunCenterX = x
+      this.sunCenterY = y
+      this.sunColor = col
+      //  
+    }
+    drawSun() {
+      noStroke();
+      for (let i = 0; i < this.numSuns; i++) {
+        let sunSize = scaledElement(300 + i * 50);
+        fill(this.sunColor);
+        ellipse(this.sunCenterX, this.sunCenterY, sunSize * 2);
+      }
+    }
   }
-}
+
 
 // [G_5] Draw the background lines
 function drawBackgroundLines() {
