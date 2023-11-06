@@ -86,9 +86,9 @@ function draw() {
    fill(255)
    textSize(scaledElement(50))
    text("1. Press 'A' or 'S' to change season.", scaledElement(50), scaledElement(3000));
-   text("2. Hover the apples to make them rotate.", scaledElement(50),scaledElement(3070));
-   text("3. Choose one apple, mouse click it and press 'Z' to pick it.", scaledElement(50),scaledElement(3140));
-   text("4. Quickly move the mouse to toss and roll the apple.", scaledElement(50),scaledElement(3210));
+   text("2. Hover the apples to make them rotate.", scaledElement(50), scaledElement(3070));
+   text("3. Choose one apple, mouse click it and press 'Z' to pick it.", scaledElement(50), scaledElement(3140));
+   text("4. Quickly move the mouse to toss and roll the apple.", scaledElement(50), scaledElement(3210));
 }
 
 // [A_1] When input "A" or "S" then change background colour, which means seasonal change. 
@@ -126,30 +126,29 @@ function drawTable() {
     // check if apple is over the right of table
     if (scaledElement(getCir.x) > tableX + scaledElement(tableW)) {
       getCir.x = (tableX + scaledElement(tableW)) / scaledElement(1) 
+      
     }
 
     // [A_2.3] Calculate the acceleration and velocity of apple to simulate motion 
-    getCirAcc = createVector(mouseX - scaledElement(getCir.x), mouseY - scaledElement(getCir.y)).mult(0.02) // acceleration vector
+    getCirAcc = createVector(mouseX - scaledElement(getCir.x), mouseY - scaledElement(getCir.y)).mult(0.02) // acceleration vector, mult(0.02) to slow down acceleration effect
     getCirAcc.y = 2.5 
     getCirVel.add(getCirAcc)
     getCir.x += getCirVel.x
     getCir.y += getCirVel.y
-    getCirVel.mult(0.97) // frictional drag
+    getCirVel.mult(0.98) 
 
-    // [A_2.4] Apple rolling
+    // [A_2.4] Make the apple rebound to the table
     getCir.angle += getCirVel.x * 0.01
-
-    // [A_2.5] Make the apple rebound when falling to the table
     if (getCir.y >= (tableY - scaledElement(radius * getCir.scale_val * getCir.s)) / scaledElement(1)) {
-      getCir.y = (tableY - scaledElement(radius * getCir.scale_val * getCir.s)) / scaledElement(1)
-      getCirVel.y *= -0.9 // set rebound
+      getCir.y = (tableY - scaledElement(radius * getCir.scale_val * getCir.s)) / scaledElement(1) // stop at the table surface
+      getCirVel.y *= -0.9 // -90%, simulate the loss of energy on vertical side due to bouncing
     } else {
       getCir.y += getCirVel.y
     }
   }
 }
 
-// [A_3] Check the crash between apple and table
+// [A_3] Mousepress the apple to choose and make it bigger
 function mousePressed() {
   pressedCircleGroups(circleCenters);
 }
@@ -160,8 +159,7 @@ function pressedCircleGroups(centers) {
     let radius = (circleRadius)
     let scale_val = scaledElement(center.scale_val)
 
-
-    if (table == false && dist(x, y, mouseX, mouseY) < radius * scale_val) {
+    if (table == false && dist(x, y, mouseX, mouseY) < radius * scale_val) { // only when apples on the tree then click will make it bigger
       center.state = 1
       center.s = 1.2
       getCir = center
@@ -179,7 +177,7 @@ function rotateCircleGroups(centers) {
     let radius = (circleRadius)
     let scale_val = scaledElement(center.scale_val)
 
-    if (table == false && dist(x, y, mouseX, mouseY) < radius * scale_val) {
+    if (table == false && dist(x, y, mouseX, mouseY) < radius * scale_val) { // only when apples on the tree then the mouse hovering can make them rotate
       center.angle += 0.1 // make angle plus gradually to make it rotate
     }
   }
