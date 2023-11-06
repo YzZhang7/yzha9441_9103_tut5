@@ -53,7 +53,7 @@ const canvasRatio = 2 / 3; // make sure the canvas ratio is always 2:3
 function setup() {
   createCanvas(windowWidth, windowHeight);
   calculateCanvasSize();
-  bgcol = color(251, 197, 0)
+  bgcol = color(243, 241, 234)
 
   // set acceleration and velocity of apple to simulate realistic motion 
   getCirVel = createVector(0, 0)
